@@ -3,7 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../../public/styles/globals.css";
 import Navbar from "../components/Navbar";
 import AnimatedGridPattern from "../components/animated-grid-pattern";
-import cn from "@/lib/utils";
+import { cn } from "@/src/lib/utils";
 import localFont from "next/font/local";
 import NextTopLoader from "nextjs-toploader";
 import Script from "next/script";
@@ -83,7 +83,7 @@ gtag('config', 'G-38D7H1GSST');
 						maxOpacity={0.1}
 						duration={3}
 						repeatDelay={1}
-						className={cn("absolute inset-16 opacity-30 [mask-image:radial-gradient(600px_circle_at_center,white,transparent)]")}
+						className={cn("absolute inset-0 opacity-30 [mask-image:radial-gradient(1100px_circle_at_center,white,transparent)]")}
 					/>
 					<div className="relative z-50">
 						<NextTopLoader color="#D1D1D1" showSpinner={false} />

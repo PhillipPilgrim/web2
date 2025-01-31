@@ -7,12 +7,12 @@ import Image from "next/image";
 export default function Navbar() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 	return (
-		<nav className="relative top-0 p-2 z-50 mx-auto w-full border-b border-zinc-400">
+		<nav className="relative top-0 z-50 mx-auto w-full border-b border-zinc-400 p-2">
 			<div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 				<div className="flex h-16 items-center justify-between font-[family-name:var(--font-switzer-regular)]">
-                    <Link href="/">
-                        <Image width={50} height={50} src="/assets/Logo-White.png" className="text-2xl" alt="Filip Musálek" />
-                    </Link>
+					<Link href="/">
+						<Image width={50} height={50} src="/assets/Logo-White.png" className="text-2xl" alt="Filip Musálek" />
+					</Link>
 
 					{/* Desktop Navigation Links */}
 					<div className="hidden items-center space-x-14 text-xl md:flex">
@@ -24,9 +24,6 @@ export default function Navbar() {
 						</Link>
 						<Link href="/contact" className="transition-colors hover:text-zinc-400">
 							Kontakt
-						</Link>
-						<Link href="/offers" className="transition-colors hover:text-zinc-400">
-							Nabídka
 						</Link>
 					</div>
 
