@@ -25,16 +25,6 @@ const AnimatedTitle = () => {
           animate={{ width: isHovered ? "100%" : "80%" }}
           transition={{ duration: 0.4 }}
         />
-
-        {/* Arrow */}
-        <motion.div
-          className="absolute left-[calc(100%+6px)] -top-6 text-zinc-200"
-          initial={{ x: -20, opacity: 0 }}
-          animate={{ x: isHovered ? 0 : -20, opacity: isHovered ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-        >
-          <ChevronRight size={32} color="#FFFFFF"  />
-        </motion.div>
       </div>
     </Link>
   )

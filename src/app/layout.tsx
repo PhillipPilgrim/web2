@@ -1,22 +1,11 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "../../public/styles/globals.css";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/NavigationBar";
 import AnimatedGridPattern from "../components/animated-grid-pattern";
 import { cn } from "@/src/lib/utils";
 import localFont from "next/font/local";
 import NextTopLoader from "nextjs-toploader";
 import Script from "next/script";
-
-const geistSans = Geist({
-	variable: "--font-geist-sans",
-	subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
-});
 
 const switzerbold = localFont({
 	src: "../../public/assets/fonts/Switzer-Bold.otf",
@@ -73,24 +62,26 @@ gtag('config', 'G-38D7H1GSST');
 					}}
 				/>
 			</head>
-			<body
-				className={`${switzerbold.variable} ${switzersemibold.variable} ${switzerregular.variable} ${switzermedium.variable} bg-[#1b1b1b] font-sans text-white antialiased`}
-			>
-				<Navbar />
-				<div className="relative flex-grow overflow-hidden">
-					<AnimatedGridPattern
-						numSquares={30}
-						maxOpacity={0.1}
-						duration={3}
-						repeatDelay={1}
-						className={cn("absolute inset-0 opacity-30 [mask-image:radial-gradient(1100px_circle_at_center,white,transparent)]")}
-					/>
-					<div className="relative z-50">
-						<NextTopLoader color="#D1D1D1" showSpinner={false} />
-						<main>{children}</main>
+				<body
+					className={`${switzerbold.variable} ${switzersemibold.variable} ${switzerregular.variable} ${switzermedium.variable} bg-[#1b1b1b] font-sans text-white antialiased`}
+				>
+					<div className="relative flex-grow overflow-hidden">
+						<AnimatedGridPattern
+							numSquares={30}
+							maxOpacity={0.1}
+							duration={3}
+							repeatDelay={1}
+							className={cn("absolute inset-0 opacity-30 [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]")}
+						/>
+						<div className="relative z-50">
+							<NextTopLoader color="#D1D1D1" showSpinner={false} />
+							<main>
+								<Navbar />
+								{children}
+							</main>
+						</div>
 					</div>
-				</div>
-			</body>
+				</body>
 		</html>
 	);
 }
