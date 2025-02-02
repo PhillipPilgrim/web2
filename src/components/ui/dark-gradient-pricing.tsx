@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { Check, X } from "lucide-react";
 import { cn } from "@/src/lib/utils";
 import { Button } from "@/src/components/ui/button";
 import { Card } from "@/src/components/ui/card";
+import { Check, X } from "@deemlol/next-icons"
+
 
 interface BenefitProps {
 	text: string;

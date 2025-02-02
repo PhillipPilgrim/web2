@@ -63,13 +63,18 @@ export default function Pricing() {
 						/>
 					</motion.div>
 				</div>
-				<motion.div
-					initial={{ opacity: 0, y: 50 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: false, amount: 0.2 }}
-					transition={{ duration: 0.5, delay: 0.5 }}
-				>
-					<p className="pt-4 text-sm text-red-700">Veškeré objednávky s vámi ještě budou projednány pro zjištění veškerých bližších informací</p>
+
+<motion.div
+initial={{ opacity: 0, y: 50 }}
+animate={{ opacity: 1, y: 0 }}
+viewport={{ once: false, amount: 0.2 }}
+transition={{ duration: 0.8, delay: 1 }}>
+				<p className="mx-auto mt-2 max-w-xl text-center text-sm text-red-700">
+					Veškeré projekty s vámi budou konzultovány. Pokud si přejete individuální konzultaci,{" "}
+					<a className="font-bold text-red-700 underline" href="/contact">
+						kontakujte mě zde
+					</a>
+				</p>
 				</motion.div>
 			</div>
 		</section>

@@ -39,29 +39,17 @@ export default function Home() {
 		},
 	];
 
-	const icons = [
-		{ component: <JavaScript className="mx-auto h-16 w-16 text-yellow-300" />, name: "JavaScript" },
-		{ component: <TypeScript className="mx-auto h-16 w-16 text-cyan-600" />, name: "TypeScript" },
-		{ component: <HTML5 className="mx-auto h-16 w-16 text-orange-400" />, name: "HTML5" },
-		{ component: <TailwindCSS className="mx-auto h-16 w-16 text-blue-400" />, name: "TailwindCSS" },
-		{ component: <ReactJS className="mx-auto h-16 w-16 text-cyan-300" />, name: "ReactJS" },
-		{ component: <TbBrandCss3 className="mx-auto h-16 w-16 text-blue-300" />, name: "CSS3" },
-		{ component: <NPMJs className="mx-auto h-16 w-16 text-red-500" />, name: "NPM" },
-		{ component: <Github className="mx-auto h-16 w-16 text-orange-600" />, name: "GitHub" },
-		{ component: <BiLogoVisualStudio className="mx-auto h-16 w-16 text-blue-500" />, name: "VS Code" },
-		{ component: <NodeJs className="mx-auto h-16 w-16 text-green-400" />, name: "NodeJS" },
-	];
 	return (
 		<motion.div>
 			{/* Main Content */}
 			<main className="mx-auto max-w-7xl px-6">
-				<div className="relative min-h-screen max-w-7xl pt-24 font-[family-name:var(--font-switzer-regular)] md:pt-52">
-					<div className="flex flex-col justify-center gap-36 text-start md:flex-row">
+				<div className="relative min-h-screen pt-24 font-[family-name:var(--font-switzer-regular)] md:pt-52">
+					<div className="flex flex-col justify-center gap-12 md:gap-36 text-start md:flex-row">
 						<motion.div
 							initial={{ opacity: 0, x: -50 }}
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 0.4 }}
-							className="max-w-2xl space-y-8"
+							className="max-w-3xl space-y-8"
 						>
 							<div className="space-y-2">
 								<AnimatedTitle />
@@ -93,7 +81,7 @@ export default function Home() {
 							<motion.div initial="hidden" animate="visible" className="flex items-center justify-start space-x-6 pb-0 pt-4 md:pb-12">
 								{links.map((link, index) => (
 									<motion.div key={link.label} variants={staggerVariants} custom={index}>
-										<Link href={link.href} rel="noopener noreferrer">
+										<Link href={link.href} rel="noopener noreferrer" target="_blank">
 											{link.icon}
 										</Link>
 									</motion.div>
