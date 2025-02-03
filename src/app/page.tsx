@@ -2,12 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useRef } from "react";
-import { BiLogoVisualStudio } from "react-icons/bi";
-import { TbBrandCss3 } from "react-icons/tb";
-import { Github, Instagram, Briefcase, Discord, TypeScript, JavaScript, HTML5, TailwindCSS, ReactJS, NodeJs, NPMJs } from "@deemlol/next-icons";
-import { motion, AnimatePresence } from "framer-motion";
-import { PricingCard } from "@/src/components/ui/dark-gradient-pricing";
+import { Github, Instagram, Briefcase, Discord } from "@deemlol/next-icons";
+import { motion, } from "framer-motion";
 import { AnimatedTitle } from "@/src/components/ui/AnimatedTitle";
 
 export default function Home() {
@@ -64,13 +60,13 @@ export default function Home() {
 
 								<div className="flex flex-wrap items-center justify-start gap-4 pt-4">
 									<Link
-										href="#contact"
+										href="/contact"
 										className="rounded-lg border-2 border-zinc-600 bg-zinc-900/50 px-4 py-2 font-medium text-white transition-opacity hover:bg-zinc-800/50 hover:opacity-90"
 									>
 										Kontaktuj mě
 									</Link>
 									<Link
-										href="#projects"
+										href="/projects"
 										className="rounded-lg border-2 border-zinc-600 bg-zinc-900/50 px-4 py-2 font-medium transition-colors hover:bg-zinc-800/50"
 									>
 										Moje práce
