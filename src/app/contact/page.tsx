@@ -1,9 +1,7 @@
-"use client"
+"use client";
 
-export default function Contact() {
-    return (
-        <div>
-            <h1>Projects</h1>
-        </div>
-    )
+export default function ContactMe() {
+	return ( 
+    <div className="mx-auto min-h-screen max-w-7xl px-4 py-24">Ahoj</div>
+    );
 }

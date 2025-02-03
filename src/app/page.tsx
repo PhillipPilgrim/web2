@@ -38,14 +38,14 @@ export default function Home() {
 	return (
 		<motion.div>
 			{/* Main Content */}
-			<main className="mx-auto max-w-7xl px-6">
+			<main className="mx-auto max-w-5xl px-6">
 				<div className="relative min-h-screen pt-24 font-[family-name:var(--font-switzer-regular)] md:pt-52">
 					<div className="flex flex-col justify-center gap-12 md:gap-36 text-start md:flex-row">
 						<motion.div
 							initial={{ opacity: 0, x: -50 }}
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 0.4 }}
-							className="max-w-3xl space-y-8"
+							className="space-y-8"
 						>
 							<div className="space-y-2">
 								<AnimatedTitle />
@@ -53,12 +53,12 @@ export default function Home() {
 								<p className="text-2xl font-light text-zinc-500">Front-end Developer</p>
 							</div>
 							<motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
-								<p className="text-lg text-zinc-400">
+								<p className="text-lg text-zinc-400 max-w-xl">
 									S vášní pro čistý kód a inovativní technologie se specializuji na tvorbu rychlých, responzivních a esteticky lákavých webů.
 									Mým cílem je proměnit vaše nápady v digitální zážitek, který zaujme a funguje na všech úrovních.
 								</p>
 
-								<div className="flex flex-wrap items-center justify-start gap-4 pt-4">
+								<div className="flex items-center justify-start gap-4 pt-4">
 									<Link
 										href="/contact"
 										className="rounded-lg border-2 border-zinc-600 bg-zinc-900/50 px-4 py-2 font-medium text-white transition-opacity hover:bg-zinc-800/50 hover:opacity-90"
