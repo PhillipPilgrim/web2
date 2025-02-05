@@ -115,7 +115,7 @@ export async function POST(req: NextRequest) {
 		return NextResponse.json({ message: "Dočasné e-mailové adresy nejsou povoleny", success: false }, { status: 400 });
 	}
 
-	if (email === "contact@flusbe.org") {
+	if (email === "kontakt@phillippilgrim.xyz") {
 		return NextResponse.json({ message: "Nelze použít tuto e-mailovou adresu", success: false }, { status: 400 });
 	}
 

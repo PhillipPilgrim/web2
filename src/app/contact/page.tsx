@@ -1,10 +1,10 @@
 "use client";
 
 import { Turnstile, TurnstileInstance } from "@marsidev/react-turnstile";
-import { Navigation, Mail } from "@deemlol/next-icons";
+import { Navigation, Mail, Loader } from "@deemlol/next-icons";
 import React, { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { toast } from "sonner";
+import { Toaster, toast } from "sonner";
 
 interface ContactFormData {
 	fullname: string;
@@ -162,7 +162,7 @@ export default function Contact() {
 					initial={{ opacity: 0, y: -50 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ duration: 0.5, delay: 0.3 }}
-					className="text-center text-sm text-gray-300"
+					className="text-center text-sm mt-2 text-gray-300"
 				>
 					Veškeré domluvy jsou nezávazné a zdarma.
 				</motion.p>
@@ -184,7 +184,7 @@ export default function Contact() {
 						value={contactFormData?.email}
 						onChange={e => handleContactFormChange(e)}
 						error={errors?.email}
-						placeholder="text@email.xyz"
+						placeholder="text@email.cz"
 					/>
 				</div>
 				<InputField
@@ -231,7 +231,9 @@ export default function Contact() {
 				>
 					<div className="flex w-80 cursor-pointer items-center justify-center rounded-lg bg-zinc-800/70 px-2 py-1.5 mx-auto text-lg text-white">
 						{isSubmitting ? (
-							<div className="flex h-7 w-7 items-center justify-center rounded-full border-r-2 border-t-2 border-gray-500"></div>
+							<div className="flex h-7 w-7 flex-row items-center justify-center">
+								<Loader className="h-5 w-5 text-white animate-spin" />
+							</div>
 						) : (
 							<span className="flex items-center justify-center">
 								<Navigation className="mr-2 h-5 w-5" aria-hidden="true" />
@@ -241,6 +243,7 @@ export default function Contact() {
 					</div>
 				</motion.button>
 			</form>
+			<Toaster position="bottom-right" />
 		</div>
 	);
 }

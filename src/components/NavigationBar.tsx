@@ -38,24 +38,6 @@ export default function Navbar() {
 					<Book size={25} />
 				</a>
 			</div>
-			<div className="flex flex-col items-center" onMouseEnter={() => setIsMouse(true)} onMouseLeave={() => setIsMouse(false)}>
-				<AnimatePresence>
-					{isMouse && (
-						<motion.span
-							initial={{ y: 0, opacity: 0 }}
-							animate={{ y: 30, opacity: 1 }}
-							whileHover={{ y: -30, opacity: 1 }}
-							transition={{ duration: 0.3 }}
-							className="pointer-events-none absolute bottom-16 mb-4 rounded-lg border border-zinc-500 bg-zinc-900 px-2 py-1 text-sm text-zinc-200"
-						>
-							O mně
-						</motion.span>
-					)}
-				</AnimatePresence>
-				<a href="/about" className="cursor-pointer text-white transition-transform duration-300 hover:scale-[1.5]">
-					<User size={25} />
-				</a>
-			</div>
 			<div className="flex flex-col items-center" onMouseEnter={() => setIsHome(true)} onMouseLeave={() => setIsHome(false)}>
 				<AnimatePresence>
 					{isHome && (
@@ -90,24 +72,6 @@ export default function Navbar() {
 				</AnimatePresence>
 				<a href="/contact" className="cursor-pointer text-white transition-transform duration-300 hover:scale-[1.5]">
 					<Mail size={25} />
-				</a>
-			</div>
-			<div className="flex flex-col items-center" onMouseEnter={() => setIsCpu(true)} onMouseLeave={() => setIsCpu(false)}>
-				<AnimatePresence>
-					{isCpu && (
-						<motion.span
-							initial={{ y: 0, opacity: 0 }}
-							animate={{ y: 30, opacity: 1 }}
-							whileHover={{ y: -30, opacity: 1 }}
-							transition={{ duration: 0.3 }}
-							className="pointer-events-none absolute bottom-16 mb-4 rounded-lg border border-zinc-500 bg-zinc-900 px-2 py-1 text-sm text-zinc-200"
-						>
-							Jazyky
-						</motion.span>
-					)}
-				</AnimatePresence>
-				<a href="/languages" className="cursor-pointer text-white transition-transform duration-300 hover:scale-[1.5]">
-					<Cpu size={25} />
 				</a>
 			</div>
 		</nav>

@@ -1,5 +1,6 @@
 "use client";
 
+import { Mail } from "@deemlol/next-icons";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Image from "next/image";
@@ -12,16 +13,16 @@ interface Project {
 
 const projects: Project[] = [
 	{ id: 1, title: "Procházky", imageUrl: "/assets/prochazky1.png" },
-	{ id: 2, title: "Procházky", imageUrl: "/assets/prochazky2.png" },
-	{ id: 3, title: "Dětské hry", imageUrl: "/assets/detskehry1.png" },
-	{ id: 4, title: "Dětské hry", imageUrl: "/assets/detskehry2.png" },
+	{ id: 2, title: "Dětské hry", imageUrl: "/assets/detskehry1.png" },
+	{ id: 3, title: "Dětské hry", imageUrl: "/assets/detskehry2.png" },
+	{ id: 4, title: "Procházky", imageUrl: "/assets/prochazky2.png" },
 ];
 
 export default function PortfolioExamples() {
 	const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
 	return (
-		<div className="mx-auto min-h-screen max-w-7xl px-4 py-24">
+		<div className="mx-auto min-h-screen max-w-7xl px-4 py-32">
 			<motion.h1
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
@@ -38,10 +39,13 @@ export default function PortfolioExamples() {
 					className="grid grid-cols-1 gap-6 md:w-2/3 md:grid-cols-2"
 				>
 					{projects.map(project => (
-						<div
+						<motion.div
+							initial={{ opacity: 0, y: 20 }}
+							animate={{ opacity: 1, y: 0 }}
+							transition={{ duration: 0.5, delay: 1 + project.id * 0.4 }}
 							key={project.id}
 							onClick={() => setSelectedImage(project.imageUrl)}
-							className="cursor-pointer overflow-hidden rounded-lg border-2 border-zinc-500 transition-transform duration-300 hover:scale-105"
+							className="cursor-pointer overflow-hidden rounded-lg duration-300 hover:scale-105"
 						>
 							<Image
 								src={project.imageUrl || "/placeholder.svg"}
@@ -50,15 +54,10 @@ export default function PortfolioExamples() {
 								height={300}
 								className="h-52 w-full object-cover"
 							/>
-						</div>
+						</motion.div>
 					))}
 				</motion.div>
-				<motion.div
-					initial={{ opacity: 0, x: 20 }}
-					animate={{ opacity: 1, x: 0 }}
-					transition={{ duration: 0.5, delay: 0.6 }}
-					className="space-y-6 text-justify md:w-1/3"
-				>
+				<div className="space-y-6 text-justify md:w-1/3">
 					<motion.div
 						initial={{ opacity: 0, y: -20 }}
 						animate={{ opacity: 1, y: 0 }}
@@ -66,35 +65,20 @@ export default function PortfolioExamples() {
 						className="space-y-4"
 					>
 						<h2 className="text-3xl font-semibold">O mých projektech</h2>
-						<div className="border-b border-white"></div>
 					</motion.div>
 					<motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1 }} className="space-y-4">
 						<p className="text-md text-zinc-400">
 							Zde jsou ukázky mých nejnovějších projektů. Každý z nich představuje jedinečnou výzvu a příležitost k tvorbě něčeho výjimečného.
 						</p>
 						<p className="text-md text-zinc-400">
-							Mé portfolio zahrnuje různorodé projekty, od fotografií z procházek až po interaktivní dětské hry. Každý projekt je navržen s
-							důrazem na detail a uživatelský zážitek.
+							Mé portfolio zahrnuje různorodé projekty, od webových stránek pro majitele psů až po stránky určené pro aplikaci Dětské-hry slabiky,
+							kde se soustředí na barvy a celkově dětský vzhled. Každý projekt je navržen s důrazem na detail a uživatelský zážitek.
 						</p>
 						<p className="text-md text-zinc-400">
 							Pokud vás zaujal některý z mých projektů a chtěli byste spolupracovat nebo se dozvědět více, neváhejte mě kontaktovat.
 						</p>
-						<div className="border-b border-white"></div>
 					</motion.div>
-					<motion.div
-						initial={{ opacity: 0, y: 30 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, delay: 1 }}
-						className="flex flex-row justify-center gap-4 pt-2"
-					>
-						<a
-							href="/contact"
-							className="rounded-lg border-2 border-zinc-600 bg-zinc-900/50 px-4 py-2 font-medium text-white transition-opacity hover:bg-zinc-800/50 hover:opacity-90"
-						>
-							Kontakt
-						</a>
-					</motion.div>
-				</motion.div>
+				</div>
 			</div>
 
 			{/* MODAL */}
