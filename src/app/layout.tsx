@@ -6,7 +6,7 @@ import { cn } from "@/src/lib/utils";
 import localFont from "next/font/local";
 import NextTopLoader from "nextjs-toploader";
 import Script from "next/script";
-
+import { AnimatePresence } from "framer-motion";
 
 const switzerbold = localFont({
 	src: "../../public/assets/fonts/Switzer-Bold.otf",
@@ -65,23 +65,23 @@ gtag('config', 'G-38D7H1GSST');
 			</head>
 			<body
 				className={`${switzerbold.variable} ${switzersemibold.variable} ${switzerregular.variable} ${switzermedium.variable} bg-[#1b1b1b] font-sans text-white antialiased`}
-			>
-				<div className="relative flex-grow overflow-hidden">
-					<AnimatedGridPattern
-						numSquares={30}
-						maxOpacity={0.1}
-						duration={3}
-						repeatDelay={1}
-						className={cn("absolute inset-0 opacity-30 skew-y-12 [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]")}
-					/>
-					<div className="relative z-50">
-						<NextTopLoader color="#D1D1D1" showSpinner={false} />
-						<main>
-							<Navbar />
-							{children}
-						</main>
+			>				
+					<div className="relative flex-grow overflow-hidden">
+						<AnimatedGridPattern
+							numSquares={30}
+							maxOpacity={0.1}
+							duration={3}
+							repeatDelay={1}
+							className={cn("absolute inset-0 skew-y-12 opacity-30 [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]")}
+						/>
+						<div className="relative z-50">
+							<NextTopLoader color="#D1D1D1" showSpinner={false} />
+							<main>
+								<Navbar />
+								<AnimatePresence mode="wait">{children}</AnimatePresence>
+							</main>
+						</div>
 					</div>
-				</div>
 			</body>
 		</html>
 	);

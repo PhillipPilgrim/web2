@@ -30,7 +30,7 @@ export default function Languages() {
 	};
 
 	return (
-		<div className="relative mx-auto pt-24 min-h-screen max-w-7xl font-[family-name:var(--font-switzer-regular)]">
+		<div className="relative mx-auto min-h-screen max-w-7xl pt-24 font-[family-name:var(--font-switzer-regular)]">
 			<motion.div
 				initial={{ opacity: 0, y: 50 }}
 				animate={{ opacity: 1, y: 0 }}
@@ -44,6 +44,7 @@ export default function Languages() {
 				<p className="text-md mt-2 text-center font-[family-name:var(--font-switzer-regular)] text-zinc-500">
 					Jazyky, které používám ke kódování k dosažení nejlepšího výsledku pro klienta i vůči přehlednosti v kódu.
 				</p>
+
 				<motion.div
 					initial="hidden"
 					whileInView="visible"

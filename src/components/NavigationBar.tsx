@@ -1,9 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import { Book, User, Mail, Cpu, Tag, House } from "@deemlol/next-icons";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
 	const [isHovered, setIsHovered] = useState(false);
@@ -57,6 +56,24 @@ export default function Navbar() {
 					<User size={25} />
 				</a>
 			</div>
+			<div className="flex flex-col items-center" onMouseEnter={() => setIsHome(true)} onMouseLeave={() => setIsHome(false)}>
+				<AnimatePresence>
+					{isHome && (
+						<motion.span
+							initial={{ y: 0, opacity: 0 }}
+							animate={{ y: 30, opacity: 1 }}
+							whileHover={{ y: -30, opacity: 1 }}
+							transition={{ duration: 0.3 }}
+							className="pointer-events-none absolute bottom-16 mb-4 rounded-lg border border-zinc-500 bg-zinc-900 px-2 py-1 text-sm text-zinc-200"
+						>
+							Úvod
+						</motion.span>
+					)}
+				</AnimatePresence>
+				<a href="/" className="cursor-pointer text-white transition-transform duration-300 hover:scale-[1.5]">
+					<House size={25} />
+				</a>
+			</div>
 			<div className="flex flex-col items-center" onMouseEnter={() => setIsMail(true)} onMouseLeave={() => setIsMail(false)}>
 				<AnimatePresence>
 					{isMail && (
@@ -91,42 +108,6 @@ export default function Navbar() {
 				</AnimatePresence>
 				<a href="/languages" className="cursor-pointer text-white transition-transform duration-300 hover:scale-[1.5]">
 					<Cpu size={25} />
-				</a>
-			</div>
-			<div className="flex flex-col items-center" onMouseEnter={() => setIsTag(true)} onMouseLeave={() => setIsTag(false)}>
-				<AnimatePresence>
-					{isTag && (
-						<motion.span
-							initial={{ y: 0, opacity: 0 }}
-							animate={{ y: 30, opacity: 1 }}
-							whileHover={{ y: -30, opacity: 1 }}
-							transition={{ duration: 0.3 }}
-							className="pointer-events-none absolute bottom-16 mb-4 rounded-lg border border-zinc-500 bg-zinc-900 px-2 py-1 text-sm text-zinc-200"
-						>
-							Ceník
-						</motion.span>
-					)}
-				</AnimatePresence>
-				<a href="/pricing" className="cursor-pointer text-white transition-transform duration-300 hover:scale-[1.5]">
-					<Tag size={25} />
-				</a>
-			</div>
-			<div className="flex flex-col items-center" onMouseEnter={() => setIsHome(true)} onMouseLeave={() => setIsHome(false)}>
-				<AnimatePresence>
-					{isHome && (
-						<motion.span
-							initial={{ y: 0, opacity: 0 }}
-							animate={{ y: 30, opacity: 1 }}
-							whileHover={{ y: -30, opacity: 1 }}
-							transition={{ duration: 0.3 }}
-							className="pointer-events-none absolute bottom-16 mb-4 rounded-lg border border-zinc-500 bg-zinc-900 px-2 py-1 text-sm text-zinc-200"
-						>
-							Úvod
-						</motion.span>
-					)}
-				</AnimatePresence>
-				<a href="/" className="cursor-pointer text-white transition-transform duration-300 hover:scale-[1.5]">
-					<House size={25} />
 				</a>
 			</div>
 		</nav>

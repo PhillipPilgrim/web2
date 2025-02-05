@@ -2,18 +2,18 @@ import { motion } from "framer-motion"
 import { useState } from "react"
 import Link from "next/link"
 
-const AnimatedTitle = () => {
+const AnimatedLanguage = () => {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
     <Link
-      href="/about"
+      href="/languages"
       className="group inline-block relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <h1 className="font-[family-name:var(--font-switzer-semibold)] text-4xl tracking-tight text-zinc-200 sm:text-5xl lg:text-6xl">
-        Filip Musálek
+      <h1 className="font-[family-name:var(--font-switzer-semibold)] tracking-tight text-zinc-300 text-3xl sm:text-3xl lg:text-3xl">
+        Jazyky
       </h1>
 
       <div className="relative mt-2">
@@ -29,4 +29,4 @@ const AnimatedTitle = () => {
   )
 }
 
-export {AnimatedTitle}
+export {AnimatedLanguage}

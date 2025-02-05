@@ -52,6 +52,7 @@ export default function Home() {
 
 								<p className="text-2xl font-light text-zinc-500">Front-end Developer</p>
 							</div>
+
 							<motion.div initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.5 }}>
 								<p className="text-lg text-zinc-400 max-w-xl">
 									S vášní pro čistý kód a inovativní technologie se specializuji na tvorbu rychlých, responzivních a esteticky lákavých webů.
@@ -84,6 +85,9 @@ export default function Home() {
 								))}
 							</motion.div>
 						</motion.div>
+
+
+						
 						<motion.div initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 1 }}>
 							<Image
 								src="/assets/filip-musalek.jpeg"
