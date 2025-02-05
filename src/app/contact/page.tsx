@@ -156,7 +156,7 @@ export default function Contact() {
 					transition={{ duration: 0.5, delay: 0.3 }}
 					className="text-center text-gray-300"
 				>
-					Máš nějaký projekt, co bys chtěl rozjet? Neváhej a kontaktuj mě.
+					Máte nějaký projekt, co byste chtěl rozjet? Neváhejte a kontaktuj mě.
 				</motion.p>
                 <motion.p
 					initial={{ opacity: 0, y: -50 }}
