@@ -8,6 +8,7 @@ import { AnimatedLanguage } from "@/src/components/ui/AnimatedLanguage";
 import Link from "next/link";
 
 export default function Home() {
+
 	return (
 		<div className="flex min-h-screen items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
 			<div className="flex max-w-4xl flex-col items-center gap-8 p-2 md:flex-row">
@@ -144,8 +145,9 @@ export default function Home() {
 							animate={{ opacity: 1, x: 0 }}
 							exit={{ opacity: 0, x: -20 }}
 							transition={{ duration: 0.5, delay: 1 }}
+							className="text-3xl font-[family-name:var(--font-switzer-semibold)] text-zinc-300"
 						>
-							<AnimatedLanguage />
+							Jazyky
 						</motion.div>
 						<div className="mt-3 flex flex-wrap gap-2">
 							{["JavaScript", "React", "TailwindCSS", "TypeScript", "Node.js", "Tailwind CSS", "NPM", "Git", "VS-Code", "CSS3", "HTML5"].map(
@@ -156,7 +158,7 @@ export default function Home() {
 										animate={{ opacity: 1, x: 0 }}
 										exit={{ opacity: 0, x: -20 }}
 										transition={{ duration: 1, delay: 1.4 + i * 0.2 }}
-										className="inline-flex items-center rounded-full bg-zinc-300 px-3 py-1 text-sm font-medium text-zinc-900"
+										className="inline-flex items-center rounded-lg bg-gradient-to-br from-zinc-400 to-zinc-600  px-3 py-1 text-sm font-medium text-zinc-900"
 									>
 										{skill}
 									</motion.span>

@@ -22,16 +22,39 @@ export default function PortfolioExamples() {
 	const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
 	return (
-		<div className="mx-auto min-h-screen max-w-7xl px-4 py-32">
+		<div className="mx-auto min-h-screen max-w-7xl px-4 py-16 md:py-32">
 			<motion.h1
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5 }}
-				className="mb-12 text-center text-5xl font-bold"
+				className="md:mb-12 mb-8 text-center text-5xl font-bold"
 			>
 				Ukázky mé práce
 			</motion.h1>
 			<div className="flex flex-col gap-8 md:flex-row">
+				
+				<div className="space-y-6 text-justify md:w-1/3">
+					<motion.div
+						initial={{ opacity: 0, y: -20 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.5, delay: 0.8 }}
+						className="space-y-4"
+					>
+						<h2 className="text-3xl font-semibold">O mých projektech</h2>
+					</motion.div>
+					<motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1 }} className="space-y-4">
+						<p className="text-md text-zinc-400">
+							Zde jsou ukázky mých nejnovějších projektů. Každý z nich představuje jedinečnou výzvu a příležitost k tvorbě něčeho výjimečného.
+						</p>
+						<p className="text-md text-zinc-400">
+							Mé portfolio zahrnuje různorodé projekty, od webových stránek pro majitele psů až po stránky určené pro aplikaci Dětské-hry slabiky,
+							kde se soustředí na barvy a celkově dětský vzhled. Každý projekt je navržen s důrazem na detail a uživatelský zážitek.
+						</p>
+						<p className="text-md text-zinc-400">
+							Pokud vás zaujal některý z mých projektů a chtěli byste spolupracovat nebo se dozvědět více, neváhejte mě kontaktovat.
+						</p>
+					</motion.div>
+				</div>
 				<motion.div
 					initial={{ opacity: 0, x: -20 }}
 					animate={{ opacity: 1, x: 0 }}
@@ -57,28 +80,6 @@ export default function PortfolioExamples() {
 						</motion.div>
 					))}
 				</motion.div>
-				<div className="space-y-6 text-justify md:w-1/3">
-					<motion.div
-						initial={{ opacity: 0, y: -20 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.5, delay: 0.8 }}
-						className="space-y-4"
-					>
-						<h2 className="text-3xl font-semibold">O mých projektech</h2>
-					</motion.div>
-					<motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1 }} className="space-y-4">
-						<p className="text-md text-zinc-400">
-							Zde jsou ukázky mých nejnovějších projektů. Každý z nich představuje jedinečnou výzvu a příležitost k tvorbě něčeho výjimečného.
-						</p>
-						<p className="text-md text-zinc-400">
-							Mé portfolio zahrnuje různorodé projekty, od webových stránek pro majitele psů až po stránky určené pro aplikaci Dětské-hry slabiky,
-							kde se soustředí na barvy a celkově dětský vzhled. Každý projekt je navržen s důrazem na detail a uživatelský zážitek.
-						</p>
-						<p className="text-md text-zinc-400">
-							Pokud vás zaujal některý z mých projektů a chtěli byste spolupracovat nebo se dozvědět více, neváhejte mě kontaktovat.
-						</p>
-					</motion.div>
-				</div>
 			</div>
 
 			{/* MODAL */}
