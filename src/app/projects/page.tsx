@@ -27,7 +27,7 @@ export default function PortfolioExamples() {
 				initial={{ opacity: 0, y: 20 }}
 				animate={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5 }}
-				className="md:mb-12 mb-8 text-center text-5xl font-bold"
+				className="md:mb-12 mb-8 text-center text-5xl font-[family-name:var(--font-switzer-semibold)]"
 			>
 				Ukázky mé práce
 			</motion.h1>
@@ -40,7 +40,7 @@ export default function PortfolioExamples() {
 						transition={{ duration: 0.5, delay: 0.8 }}
 						className="space-y-4"
 					>
-						<h2 className="text-3xl font-semibold">O mých projektech</h2>
+						<h2 className="text-3xl font-[family-name:var(--font-switzer-semibold)]">O mých projektech</h2>
 					</motion.div>
 					<motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 1 }} className="space-y-4">
 						<p className="text-md text-zinc-400">

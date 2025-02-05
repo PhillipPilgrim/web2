@@ -69,8 +69,8 @@ export default function Home() {
 					transition={{ duration: 0.5 }}
 					className="md:w-2/3"
 				>
-					<div className="text-sm font-semibold uppercase tracking-wide text-zinc-400">Front-End Developer - Webový vývojář</div>
-					<h1 className="mt-2 text-4xl font-extrabold text-zinc-300">Filip Musálek</h1>
+					<div className="text-sm font-[family-name:var(--font-switzer-semibold)] uppercase tracking-wide text-zinc-400">Front-End Developer - Webový vývojář</div>
+					<h1 className="mt-2 text-4xl font-[family-name:var(--font-switzer-bold)] text-zinc-300">Filip Musálek</h1>
 					<p className="text-md mt-4 text-justify text-zinc-400">
 						Tvořím inovativní, výkonné a vizuálně poutavé digitální vizitky, které nejen osloví, ale i zaujmou na první pohled. Specializuji se na
 						špičkové UI/UX, moderní technologie a chytrá online řešení, která skutečně přinášejí výsledky.
@@ -92,7 +92,7 @@ export default function Home() {
 									style={{ flexShrink: 0 }}
 									className="mr-2 h-8 w-8 cursor-pointer text-zinc-400 transition-all group-hover:scale-125 group-hover:text-red-600"
 								/>
-								<span className="flex items-center">Front-End Developer and UI/UX Designer at Flusbe.org</span>
+								<span className="flex items-center font-[family-name:var(--font-switzer-regular)]">Front-End Developer and UI/UX Designer at Flusbe.org</span>
 							</a>
 						</div>
 						<div className="group flex items-center text-zinc-300">
@@ -106,7 +106,7 @@ export default function Home() {
 									style={{ flexShrink: 0 }}
 									className="mr-2 h-8 w-8 cursor-pointer text-zinc-400 transition-all group-hover:scale-125 group-hover:text-[#fec102]"
 								/>
-								<span className="flex items-center">Instagram, kde mě lze také kontaktovat</span>
+								<span className="flex items-center font-[family-name:var(--font-switzer-regular)]">Instagram, kde mě lze také kontaktovat</span>
 							</a>
 						</div>
 						<div className="flex items-center text-zinc-300">
@@ -120,7 +120,7 @@ export default function Home() {
 									style={{ flexShrink: 0 }}
 									className="mr-2 h-8 w-8 cursor-pointer text-zinc-400 transition-all group-hover:scale-125 group-hover:text-orange-400"
 								/>
-								<span className="flex items-center">Phillip Pilgrim - Github Profile</span>
+								<span className="flex items-center font-[family-name:var(--font-switzer-regular)]">Phillip Pilgrim - Github Profile</span>
 							</a>
 						</div>
 						<div className="flex items-center text-zinc-300">
@@ -134,7 +134,7 @@ export default function Home() {
 									style={{ flexShrink: 0 }}
 									className="mr-2 h-8 w-8 cursor-pointer text-zinc-400 transition-all group-hover:scale-125 group-hover:text-[#5662f6]"
 								/>
-								<span className="flex items-center">Phillip Pilgrim</span>
+								<span className="flex items-center font-[family-name:var(--font-switzer-regular)]">Phillip Pilgrim</span>
 							</a>
 						</div>
 					</motion.div>
