@@ -31,30 +31,30 @@ export default function Home() {
 					</motion.div>
 
 					<motion.div
-						className="mt-10"
+						className="mt-2"
 						initial={{ opacity: 0, x: -50 }}
 						animate={{ opacity: 1, x: 0 }}
 						exit={{ opacity: 0, x: -50 }}
 						transition={{ duration: 0.5, delay: 1 }}
 					>
-						<ul className="flex flex-col space-x-4 space-y-6">
+						<ul className="flex flex-col space-x-4 space-y-4">
 							<li className="flex items-center">
 								<div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/50">
 									<Mail size={25} className="text-white" />
 								</div>
 
 								<Link href={`mailto:${EMAIL}`} className="ml-4 text-white">
-									<small className="block text-gray-300">Email:</small>
+									<small className="block text-gray-300 text-lg font-[family-name:var(--font-switzer-semibold)]">Email:</small>
 									{EMAIL}
 								</Link>
 							</li>
 							<li className="flex items-center pb-7">
 								<div className="flex h-10 w-10 items-center justify-center rounded-xl bg-zinc-800/50">
-									<Phone size={25} className="text-white" />
+									<Phone size={25} className="text-white " />
 								</div>
 
 								<Link href={`tel:${CISLO}`} className="ml-4 text-white">
-									<small className="block text-gray-300">Telefon:</small>
+									<small className="block text-gray-300 text-lg font-[family-name:var(--font-switzer-semibold)]">Telefon:</small>
 									{CISLO}
 								</Link>
 							</li>
@@ -90,7 +90,7 @@ export default function Home() {
 							<a href="https://www.flusbe.org/" target="_blank" rel="noreferrer noopener" className="flex flex-row group-hover:text-red-600">
 								<Briefcase
 									style={{ flexShrink: 0 }}
-									className="mr-2 h-8 w-8 cursor-pointer text-zinc-400 transition-all group-hover:scale-125 group-hover:text-red-600"
+									className="mr-2 h-8 w-8 cursor-pointer text-zinc-400 transition-all group-hover:scale-110 group-hover:text-red-600"
 								/>
 								<span className="flex items-center font-[family-name:var(--font-switzer-regular)]">Front-End Developer and UI/UX Designer at Flusbe.org</span>
 							</a>
@@ -104,7 +104,7 @@ export default function Home() {
 							>
 								<Instagram
 									style={{ flexShrink: 0 }}
-									className="mr-2 h-8 w-8 cursor-pointer text-zinc-400 transition-all group-hover:scale-125 group-hover:text-[#fec102]"
+									className="mr-2 h-8 w-8 cursor-pointer text-zinc-400 transition-all group-hover:scale-110 group-hover:text-[#fec102]"
 								/>
 								<span className="flex items-center font-[family-name:var(--font-switzer-regular)]">Instagram, kde mě lze také kontaktovat</span>
 							</a>
@@ -118,7 +118,7 @@ export default function Home() {
 							>
 								<Github
 									style={{ flexShrink: 0 }}
-									className="mr-2 h-8 w-8 cursor-pointer text-zinc-400 transition-all group-hover:scale-125 group-hover:text-orange-400"
+									className="mr-2 h-8 w-8 cursor-pointer text-zinc-400 transition-all group-hover:scale-110 group-hover:text-orange-400"
 								/>
 								<span className="flex items-center font-[family-name:var(--font-switzer-regular)]">Phillip Pilgrim - Github Profile</span>
 							</a>
@@ -132,7 +132,7 @@ export default function Home() {
 							>
 								<Discord
 									style={{ flexShrink: 0 }}
-									className="mr-2 h-8 w-8 cursor-pointer text-zinc-400 transition-all group-hover:scale-125 group-hover:text-[#5662f6]"
+									className="mr-2 h-8 w-8 cursor-pointer text-zinc-400 transition-all group-hover:scale-110 group-hover:text-[#5662f6]"
 								/>
 								<span className="flex items-center font-[family-name:var(--font-switzer-regular)]">Phillip Pilgrim</span>
 							</a>

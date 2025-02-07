@@ -1,6 +1,6 @@
 {
     "workbench.editor.decorations.colors": true,
     "workbench.preferredDarkColorTheme": "Default Dark Modern",
-    "workbench.colorTheme": "Monokai",
-    "workbench.iconTheme": "Monokai Pro Icons"
+    "workbench.colorTheme": "Andromeda",
+    "workbench.iconTheme": "vs-seti"
 }
