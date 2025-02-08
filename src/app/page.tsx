@@ -4,7 +4,6 @@ import { Github, Instagram, Briefcase, Discord, Mail, Phone } from "@deemlol/nex
 import { EMAIL, CISLO } from "@/src/app/utils/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { AnimatedLanguage } from "@/src/components/ui/AnimatedLanguage";
 import Link from "next/link";
 
 export default function Home() {

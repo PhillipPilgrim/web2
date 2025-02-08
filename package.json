@@ -1,6 +1,6 @@
 {
 	"name": "web2",
-	"version": "0.2.5",
+	"version": "1.0.0",
 	"private": true,
 	"scripts": {
 		"dev": "next dev --turbopack -p 3000",
@@ -26,8 +26,6 @@
 		"nodemailer": "^6.10.0",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
-		"react-icons": "^5.4.0",
-		"react-turnstile": "^1.1.4",
 		"sonner": "^1.7.4",
 		"swup": "^4.8.1",
 		"tailwind-merge": "^2.6.0",
