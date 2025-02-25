@@ -13,8 +13,8 @@ interface Project {
 
 const projects: Project[] = [
 	{ id: 1, title: "Procházky", imageUrl: "/assets/prochazky1.png" },
-	{ id: 2, title: "Dětské hry", imageUrl: "/assets/detskehry1.png" },
-	{ id: 3, title: "Dětské hry", imageUrl: "/assets/detskehry2.png" },
+	{ id: 2, title: "Dětské hry", imageUrl: "/assets/detskehry1.gif" },
+	{ id: 3, title: "Dětské hry", imageUrl: "/assets/detskehry2.gif" },
 	{ id: 4, title: "Procházky", imageUrl: "/assets/prochazky2.png" },
 ];
 
@@ -47,8 +47,8 @@ export default function PortfolioExamples() {
 							Zde jsou ukázky mých nejnovějších projektů. Každý z nich představuje jedinečnou výzvu a příležitost k tvorbě něčeho výjimečného.
 						</p>
 						<p className="text-md text-zinc-400">
-							Mé portfolio zahrnuje různorodé projekty, od webových stránek pro majitele psů až po stránky určené pro aplikaci Dětské-hry slabiky,
-							kde se soustředí na barvy a celkově dětský vzhled. Každý projekt je navržen s důrazem na detail a uživatelský zážitek.
+							Mé portfolio zahrnuje různorodé projekty, od webových stránek pro majitele psů až po stránky určené herní komunitu GTA V,
+							kde se soustředí na barvy a celkově herní vzhled. Každý projekt je navržen s důrazem na detail a uživatelský zážitek.
 						</p>
 						<p className="text-md text-zinc-400">
 							Pokud vás zaujal některý z mých projektů a chtěli byste spolupracovat nebo se dozvědět více, neváhejte mě kontaktovat.
